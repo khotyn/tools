@@ -16,4 +16,4 @@ sudo classDump 17118 'com.khotyn.*' dump
 * 2nd parameter: the name of the class that you want to dump, as a regular expression.
 * 3rd parameter (Optional): the directory the classes you want to dumped to, default current directory.
 
-**Only support Mac OS X now, if you want use it in other platform, create your own sa-jdi.jar according to this artical and replace the one in the repository.**
+**Only support Mac OS X now, if you want use it in other platform, create your own sa-jdi.jar according to [this artical](http://blog.khotyn.com/blog/2013/08/03/dumping-class-from-jvm/) and replace the one in the repository.**
