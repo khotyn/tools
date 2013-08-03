@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#### @author khotyn
+#### A script to dump class from a JVM that matches a specific regular expression.
+#### Usage:
+####	$1: The PID of the target JVM.
+####	$2: The regular expression, all the class whose class name matches the regular expression will be dump to the disk.
+####	$3: The directory that the classes you want to dumped to. (Optional, default dump to current directory.)
+
+JAVA_OPT="-cp ${HOME}/.tools/sa-jdi.jar -Dsun.jvm.hotspot.tools.jcore.regexFilterPattern=$2"
+
+if [ "$3" ]; then
+	JAVA_OPT="$JAVA_OPT -Dsun.jvm.hotspot.tools.jcore.outputDir=$3"
+fi
+
+java $JAVA_OPT sun.jvm.hotspot.tools.jcore.ClassDump $1
