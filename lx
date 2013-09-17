@@ -1,0 +1,3 @@
+#!/bin/sh
+
+python $HOME/.tools/xunlei-lixian/lixian_cli.py $*
